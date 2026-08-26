@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Review card — Mark’s Heating &amp; Air</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .card {
+      max-width: 520px;
+      margin: 1.2rem auto 2.6rem;
+      background: var(--ncr);
+      border: 1px solid #5a6e58;
+      padding: 1.3rem 1.35rem 1.6rem;
+      box-shadow: 0 0 0 10px #8a8680, 0 0 0 11px #5a564e;
+    }
+    .card h1 {
+      font-family: "Chivo", sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: 1.35rem;
+      margin: 0 0 0.35rem;
+      letter-spacing: 0.02em;
+    }
+    .card img { width: 220px; height: 220px; display: block; margin: 0.8rem auto; background: #fff; }
+    .card .actions { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 1rem; }
+    .card .actions button, .card .actions a {
+      background: var(--red); color: #fff; text-decoration: none; border: 0;
+      padding: 0.55rem 0.8rem; cursor: pointer; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.85rem;
+    }
+    .card .actions a { background: var(--ink); }
+    .scan { text-align: center; }
+    @media print {
+      .clip-bar, .lang, .card .actions { display: none !important; }
+      .card { box-shadow: none; margin: 0; }
+      body { background: #fff; }
+    }
+  </style>
+</head>
+<body>
+  <header class="clip-bar">
+    <span data-en="Printable review card" data-es="Tarjeta de reseña para imprimir">Printable review card</span>
+    <nav class="lang" aria-label="Language">
+      <button type="button" data-set="en" aria-pressed="true">EN</button>
+      <button type="button" data-set="es" aria-pressed="false">ES</button>
+    </nav>
+  </header>
+  <article class="card">
+    <p class="kind" data-en="Leave a review if the job was right" data-es="Deje una reseña si el trabajo quedó bien">Leave a review if the job was right</p>
+    <h1>Mark’s Heating &amp; Air</h1>
+    <p>1284 El Rey Ave., El Cajon, CA 92021 · Lic# 995729</p>
+    <p><a class="plain" href="tel:+16192047059">619-204-7059</a> · <a class="plain" href="mailto:marksbhvac@gmail.com">marksbhvac@gmail.com</a></p>
+    <img src="review-qr.svg" width="220" height="220" alt="QR code: Google search for Mark’s Heating &amp; Air El Cajon CA">
+    <p class="scan" data-en="Scan to find us on Google and leave a review." data-es="Escanee para encontrarnos en Google y dejar una reseña.">Scan to find us on Google and leave a review.</p>
+    <div class="actions">
+      <button type="button" id="print-card" data-en="Print this card" data-es="Imprimir esta tarjeta">Print this card</button>
+      <a href="index.html" data-en="Back to the ticket" data-es="Volver a la boleta">Back to the ticket</a>
+    </div>
+  </article>
+  <script src="script.js"></script>
+</body>
+</html>
